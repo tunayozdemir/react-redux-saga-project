@@ -5,8 +5,6 @@ import './assets/style/_general.scss'
 import { Home, Users } from './pages'
 
 
-
-
 function App() {
 
   return (
