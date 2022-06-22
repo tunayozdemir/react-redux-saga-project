@@ -9,6 +9,7 @@ const todoData = {
 }
 
 const TodoList = () => {
+
   const todos = useSelector(value => value.Todos)
   const dispatch = useDispatch()
 
@@ -25,7 +26,6 @@ const TodoList = () => {
   return (
     <div>
       {/* Todo */}
-      <Button onClick={()=>dispatch(Actions.addTodo(todoData))}>Add Todo</Button>
       <ul>
         {todos && todos.map((items, index)=> {
           return(
@@ -33,6 +33,7 @@ const TodoList = () => {
           )
         })}
       </ul>
+      <Button onClick={()=>dispatch(Actions.addTodo(todoData))}>Add Todo Name</Button>
     </div>
   )
 }
