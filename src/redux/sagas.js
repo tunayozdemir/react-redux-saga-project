@@ -1,9 +1,13 @@
 import {all} from 'redux-saga/effects'
-import UserSaga from './Users/sagas'
+import User from './Users/sagas'
+import * as Counter from './Counter/sagas'
 
 
-export default function* rootSaga(){
+ function* rootSaga(){
   yield all([
-    UserSaga()
+    User(),
+    ...Object.values(Counter)
   ])
 }
+
+export default rootSaga;
